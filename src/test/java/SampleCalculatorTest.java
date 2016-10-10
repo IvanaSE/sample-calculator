@@ -102,7 +102,7 @@ public class SampleCalculatorTest {
 				}
 
 					@Test
-					public void testAddLargeSizedNegativeNumbers() {
+				public void testAddLargeSizedNegativeNumbers() {
 						double tempRandomValue1 = 0;
 						double tempRandomValue2 = 0;
 						double tempResult = 0;
@@ -118,4 +118,109 @@ public class SampleCalculatorTest {
 					
 				}
 
+					@Test
+					public void testSubtractSmallSizedPositiveNumbers() {
+						double tempRandomValue1 = 0;
+						double tempRandomValue2 = 0;
+						double tempResult = 0;
+						
+						for (int i = 0; i<200; i++) {
+							tempRandomValue1 = Double.valueOf(df.format(random.nextDouble()*10));
+							tempRandomValue2 = Double.valueOf(df.format(random.nextDouble()*10));
+							tempResult = tempRandomValue1 - tempRandomValue2;
+							LOG.info("Testing the method subtract with: " + tempRandomValue1 + " and " + tempRandomValue2);
+							assertEquals(calc.subtract(tempRandomValue1, tempRandomValue2), tempResult, 0.001);
+						}
+					}
+						
+						@Test
+					public void testSubtractMediumSizedPositiveNumbers() {
+							double tempRandomValue1 = 0;
+							double tempRandomValue2 = 0;
+							double tempResult = 0;
+							
+							for (int i = 0; i<200; i++) {
+								tempRandomValue1 = Double.valueOf(df.format(random.nextDouble()*100));
+								tempRandomValue2 = Double.valueOf(df.format(random.nextDouble()*100));
+								tempResult = tempRandomValue1 - tempRandomValue2;
+								LOG.info("Testing the method subtract with: " + tempRandomValue1 + " and " + tempRandomValue2);
+								assertEquals(calc.subtract(tempRandomValue1, tempRandomValue2), tempResult, 0.001);
+							}
+						}
+
+								@Test
+								public void testSubtractLargeSizedPositiveNumbers() {
+									double tempRandomValue1 = 0;
+									double tempRandomValue2 = 0;
+									double tempResult = 0;
+									
+									for (int i = 0; i<200; i++) {
+										tempRandomValue1 = Double.valueOf(df.format(random.nextDouble()*1000));
+										tempRandomValue2 = Double.valueOf(df.format(random.nextDouble()*1000));
+										tempResult = tempRandomValue1 - tempRandomValue2;
+										LOG.info("Testing the method subtract with: " + tempRandomValue1 + " and " + tempRandomValue2);
+										assertEquals(calc.subtract(tempRandomValue1, tempRandomValue2), tempResult, 0.001);
+									}
+
+							
+						}
+							
+							@Test
+							public void testSubtractZeros(){
+								double tempRandomValue1 = 0;
+								double tempRandomValue2 = 0;
+								double tempResult = 0;
+								
+								LOG.info("Testing the method subtract with: " + tempRandomValue1 + " and " + tempRandomValue2);
+								assertEquals(calc.subtract(tempRandomValue1, tempRandomValue2), tempResult, 0.001);
+							}
+							
+							@Test
+							public void testSubtractSmallSizedNegativeNumbers() {
+								double tempRandomValue1 = 0;
+								double tempRandomValue2 = 0;
+								double tempResult = 0;
+								
+								for (int i = 0; i<200; i++) {
+									tempRandomValue1 = Double.valueOf(df.format(random.nextDouble()*(-10)));
+									tempRandomValue2 = Double.valueOf(df.format(random.nextDouble()*(-10)));
+									tempResult = tempRandomValue1 - tempRandomValue2;
+									LOG.info("Testing the method subtract with: " + tempRandomValue1 + " and " + tempRandomValue2);
+									assertEquals(calc.subtract(tempRandomValue1, tempRandomValue2), tempResult, 0.001);
+								}
+							}
+								
+								@Test
+								public void testSubtractMediumSizedNegativeNumbers() {
+									double tempRandomValue1 = 0;
+									double tempRandomValue2 = 0;
+									double tempResult = 0;
+									
+									for (int i = 0; i<200; i++) {
+										tempRandomValue1 = Double.valueOf(df.format(random.nextDouble()*(-100)));
+										tempRandomValue2 = Double.valueOf(df.format(random.nextDouble()*(-100)));
+										tempResult = tempRandomValue1 - tempRandomValue2;
+										LOG.info("Testing the method subtract with: " + tempRandomValue1 + " and " + tempRandomValue2);
+										assertEquals(calc.subtract(tempRandomValue1, tempRandomValue2), tempResult, 0.001);
+									}
+								}
+
+									@Test
+									public void testSubtractLargeSizedNegativeNumbers() {
+										double tempRandomValue1 = 0;
+										double tempRandomValue2 = 0;
+										double tempResult = 0;
+										
+										for (int i = 0; i<200; i++) {
+											tempRandomValue1 = Double.valueOf(df.format(random.nextDouble()*(-1000)));
+											tempRandomValue2 = Double.valueOf(df.format(random.nextDouble()*(-1000)));
+											tempResult = tempRandomValue1 - tempRandomValue2;
+											LOG.info("Testing the method subtract with: " + tempRandomValue1 + " and " + tempRandomValue2);
+											assertEquals(calc.subtract(tempRandomValue1, tempRandomValue2), tempResult, 0.001);
+										}
+
+									
+								}
+
+					
 }
