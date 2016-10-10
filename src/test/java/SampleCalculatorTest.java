@@ -45,7 +45,7 @@ public class SampleCalculatorTest {
 		}
 
 				@Test
-				public void testAddLargeSizedPositiveNumbers() {
+			public void testAddLargeSizedPositiveNumbers() {
 					double tempRandomValue1 = 0;
 					double tempRandomValue2 = 0;
 					double tempResult = 0;
@@ -222,5 +222,211 @@ public class SampleCalculatorTest {
 									
 								}
 
-					
+									@Test
+									public void testMultiplySmallSizedPositiveNumbers() {
+										double tempRandomValue1 = 0;
+										double tempRandomValue2 = 0;
+										double tempResult = 0;
+										
+										for (int i = 0; i<200; i++) {
+											tempRandomValue1 = Double.valueOf(df.format(random.nextDouble()*10));
+											tempRandomValue2 = Double.valueOf(df.format(random.nextDouble()*10));
+											tempResult = tempRandomValue1 * tempRandomValue2;
+											LOG.info("Testing the method multiply with: " + tempRandomValue1 + " and " + tempRandomValue2);
+											assertEquals(calc.multiply(tempRandomValue1, tempRandomValue2), tempResult, 0.001);
+										}
+									}
+										
+										@Test
+									public void testMultiplyMediumSizedPositiveNumbers() {
+											double tempRandomValue1 = 0;
+											double tempRandomValue2 = 0;
+											double tempResult = 0;
+											
+											for (int i = 0; i<200; i++) {
+												tempRandomValue1 = Double.valueOf(df.format(random.nextDouble()*100));
+												tempRandomValue2 = Double.valueOf(df.format(random.nextDouble()*100));
+												tempResult = tempRandomValue1 * tempRandomValue2;
+												LOG.info("Testing the method multiply with: " + tempRandomValue1 + " and " + tempRandomValue2);
+												assertEquals(calc.multiply(tempRandomValue1, tempRandomValue2), tempResult, 0.001);
+											}
+										}
+
+												@Test
+											public void testMultiplyLargeSizedPositiveNumbers() {
+													double tempRandomValue1 = 0;
+													double tempRandomValue2 = 0;
+													double tempResult = 0;
+													
+													for (int i = 0; i<200; i++) {
+														tempRandomValue1 = Double.valueOf(df.format(random.nextDouble()*1000));
+														tempRandomValue2 = Double.valueOf(df.format(random.nextDouble()*1000));
+														tempResult = tempRandomValue1 * tempRandomValue2;
+														LOG.info("Testing the method multiply with: " + tempRandomValue1 + " and " + tempRandomValue2);
+														assertEquals(calc.multiply(tempRandomValue1, tempRandomValue2), tempResult, 0.001);
+													}
+
+											
+										}
+											
+											@Test
+											public void testMultiplyZeros(){
+												double tempRandomValue1 = 0;
+												double tempRandomValue2 = 0;
+												double tempResult = 0;
+												
+												LOG.info("Testing the method multiply with: " + tempRandomValue1 + " and " + tempRandomValue2);
+												assertEquals(calc.multiply(tempRandomValue1, tempRandomValue2), tempResult, 0.001);
+											}
+											
+											@Test
+											public void testMultiplySmallSizedNegativeNumbers() {
+												double tempRandomValue1 = 0;
+												double tempRandomValue2 = 0;
+												double tempResult = 0;
+												
+												for (int i = 0; i<200; i++) {
+													tempRandomValue1 = Double.valueOf(df.format(random.nextDouble()*(-10)));
+													tempRandomValue2 = Double.valueOf(df.format(random.nextDouble()*(-10)));
+													tempResult = tempRandomValue1 * tempRandomValue2;
+													LOG.info("Testing the method multiply with: " + tempRandomValue1 + " and " + tempRandomValue2);
+													assertEquals(calc.multiply(tempRandomValue1, tempRandomValue2), tempResult, 0.001);
+												}
+											}
+												
+												@Test
+												public void testMultiplyMediumSizedNegativeNumbers() {
+													double tempRandomValue1 = 0;
+													double tempRandomValue2 = 0;
+													double tempResult = 0;
+													
+													for (int i = 0; i<200; i++) {
+														tempRandomValue1 = Double.valueOf(df.format(random.nextDouble()*(-100)));
+														tempRandomValue2 = Double.valueOf(df.format(random.nextDouble()*(-100)));
+														tempResult = tempRandomValue1 * tempRandomValue2;
+														LOG.info("Testing the method multiply with: " + tempRandomValue1 + " and " + tempRandomValue2);
+														assertEquals(calc.multiply(tempRandomValue1, tempRandomValue2), tempResult, 0.001);
+													}
+												}
+
+													@Test
+												public void testMultiplyLargeSizedNegativeNumbers() {	
+														double tempRandomValue1 = 0;
+														double tempRandomValue2 = 0;
+														double tempResult = 0;
+														
+														for (int i = 0; i<200; i++) {
+															tempRandomValue1 = Double.valueOf(df.format(random.nextDouble()*(-1000)));
+															tempRandomValue2 = Double.valueOf(df.format(random.nextDouble()*(-1000)));
+															tempResult = tempRandomValue1 * tempRandomValue2;
+															LOG.info("Testing the method multiply with: " + tempRandomValue1 + " and " + tempRandomValue2);
+															assertEquals(calc.multiply(tempRandomValue1, tempRandomValue2), tempResult, 0.001);
+														}
+													}
+													
+													@Test
+													public void testDivideSmallSizedPositiveNumbers() {
+														double tempRandomValue1 = 0;
+														double tempRandomValue2 = 0;
+														double tempResult = 0;
+														
+														for (int i = 0; i<200; i++) {
+															tempRandomValue1 = Double.valueOf(df.format(random.nextDouble()*10));
+															tempRandomValue2 = Double.valueOf(df.format(random.nextDouble()*10));
+															tempResult = tempRandomValue1 / tempRandomValue2;
+															LOG.info("Testing the method divide with: " + tempRandomValue1 + " and " + tempRandomValue2);
+															assertEquals(calc.divide(tempRandomValue1, tempRandomValue2), tempResult, 0.001);
+														}
+													}
+														
+														@Test
+													public void testDivideMediumSizedPositiveNumbers() {
+															double tempRandomValue1 = 0;
+															double tempRandomValue2 = 0;
+															double tempResult = 0;
+															
+															for (int i = 0; i<200; i++) {
+																tempRandomValue1 = Double.valueOf(df.format(random.nextDouble()*100));
+																tempRandomValue2 = Double.valueOf(df.format(random.nextDouble()*100));
+																tempResult = tempRandomValue1 / tempRandomValue2;
+																LOG.info("Testing the method divide with: " + tempRandomValue1 + " and " + tempRandomValue2);
+																assertEquals(calc.divide(tempRandomValue1, tempRandomValue2), tempResult, 0.001);
+															}
+														}
+
+																@Test
+															public void testDivideLargeSizedPositiveNumbers() {
+																	double tempRandomValue1 = 0;
+																	double tempRandomValue2 = 0;
+																	double tempResult = 0;
+																	
+																	for (int i = 0; i<200; i++) {
+																		tempRandomValue1 = Double.valueOf(df.format(random.nextDouble()*1000));
+																		tempRandomValue2 = Double.valueOf(df.format(random.nextDouble()*1000));
+																		tempResult = tempRandomValue1 / tempRandomValue2;
+																		LOG.info("Testing the method divide with: " + tempRandomValue1 + " and " + tempRandomValue2);
+																		assertEquals(calc.divide(tempRandomValue1, tempRandomValue2), tempResult, 0.001);
+																	}
+
+															
+														}
+															
+													/*		@Test
+															public void testDivideZeros(){
+																double tempRandomValue1 = 0;
+																double tempRandomValue2 = 0;
+																double tempResult = 0;
+																
+																LOG.info("Testing the method divide with: " + tempRandomValue1 + " and " + tempRandomValue2);
+																assertEquals(calc.divide(tempRandomValue1, tempRandomValue2), tempResult, 0.001);
+															}*/
+															
+															@Test
+															public void testDivideSmallSizedNegativeNumbers() {
+																double tempRandomValue1 = 0;
+																double tempRandomValue2 = 0;
+																double tempResult = 0;
+																
+																for (int i = 0; i<200; i++) {
+																	tempRandomValue1 = Double.valueOf(df.format(random.nextDouble()*(-10)));
+																	tempRandomValue2 = Double.valueOf(df.format(random.nextDouble()*(-10)));
+																	tempResult = tempRandomValue1 / tempRandomValue2;
+																	LOG.info("Testing the method divide with: " + tempRandomValue1 + " and " + tempRandomValue2);
+																	assertEquals(calc.divide(tempRandomValue1, tempRandomValue2), tempResult, 0.001);
+																}
+															}
+																
+																@Test
+																public void testDivideMediumSizedNegativeNumbers() {
+																	double tempRandomValue1 = 0;
+																	double tempRandomValue2 = 0;
+																	double tempResult = 0;
+																	
+																	for (int i = 0; i<200; i++) {
+																		tempRandomValue1 = Double.valueOf(df.format(random.nextDouble()*(-100)));
+																		tempRandomValue2 = Double.valueOf(df.format(random.nextDouble()*(-100)));
+																		tempResult = tempRandomValue1 / tempRandomValue2;
+																		LOG.info("Testing the method divide with: " + tempRandomValue1 + " and " + tempRandomValue2);
+																		assertEquals(calc.divide(tempRandomValue1, tempRandomValue2), tempResult, 0.001);
+																	}
+																}
+
+																	@Test
+																public void testDivideLargeSizedNegativeNumbers() {	
+																		double tempRandomValue1 = 0;
+																		double tempRandomValue2 = 0;
+																		double tempResult = 0;
+																		
+																		for (int i = 0; i<200; i++) {
+																			tempRandomValue1 = Double.valueOf(df.format(random.nextDouble()*(-1000)));
+																			tempRandomValue2 = Double.valueOf(df.format(random.nextDouble()*(-1000)));
+																			tempResult = tempRandomValue1 / tempRandomValue2;
+																			LOG.info("Testing the method divide with: " + tempRandomValue1 + " and " + tempRandomValue2);
+																			assertEquals(calc.divide(tempRandomValue1, tempRandomValue2), tempResult, 0.001);
+																		}
+																	}
+
+													
 }
+					
+
